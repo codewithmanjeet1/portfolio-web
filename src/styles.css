@@ -1,0 +1,150 @@
+/*    
+! =========::INDEX OF CSS::========
+:: 1.0 WEB FONTS
+:: 2.0 Globaal
+:: 10.0 Variabal define css
+:: 3.0 Common css 
+::4.0 header css
+::5.0 Home css
+::6.0 Counter css
+::6.0 Promo css
+::6.0 Contact css
+::7.0 Footer css
+::8.0 Responsive css
+::9.0 Scroll  css
+!==================/*
+/*================
+  ! 1.0 WEB FONTS
+=================*/
+/* @import url("googlefont "); */
+
+/*
+
+/*====================
+ ! 2.0 Globaal Variabal define css
+=====================*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:active,
+:hover,
+:focus {
+    outline: none;
+    -moz-outline: none;
+    outline-offset: 0
+}
+
+@font-face {
+    font-family: text_font;
+    src: url(assets/fonts/EBGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: head_text;
+    src: url(assets/fonts/TrajanPro-Regular.ttf);
+}
+
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a,
+a:hover {
+    color: var(--bg-color);
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+
+/*====================
+! 10.0 Variabal define css
+=====================*/
+:root {
+    /* todo  background color  */
+    --bg-color: #34353a;
+    --hover-bg: #f4c26dfc;
+    --profile-bg: #31333b;
+    --exprience-bg: #3d3e42;
+    /* ---bg: #3d3e42; */
+
+    /*todo  text color */
+    --text-font: text_font;
+    --head-font: head_text;
+    --text-color: #b2b2b4;
+    --head-color: #f9f9f9;
+
+
+}
+
+/* ==========================
+! 3.0 Common css 
+============================*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--text-font);
+    color: var(--text-color);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a:hover,
+a:focus {
+    color: var(--text-color);
+}
+
+a,
+a:hover,
+a:focus,
+.btn:focus {
+    text-decoration: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+ol li,
+ul li {
+    list-style: none;
+}
+
+.brand_name {
+    color: var(--head-color);
+}
+
+.my_btn {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.my_btn:hover {
+    color: var(--head-color);
+    background-color: var(--hover-bg);
+}

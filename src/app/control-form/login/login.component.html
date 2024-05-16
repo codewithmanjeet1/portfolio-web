@@ -1,0 +1,77 @@
+<section class="form_control pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="userList">
+                    <h3 class="user_head text-center"> user list </h3>
+                    <table class="table">
+                        <thead>
+                            <tr class="text-capitalize">
+                                <th scope="col">name</th>
+                                <th scope="col">email</th>
+                                <th scope="col">password</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr scope="row" class="" *ngFor="let item of UserData; let i= index">
+                                <td class="text-capitalize"> {{item.name}}</td>
+                                <td class="text-capitalize"> {{item.email}}</td>
+                                <td class="text-capitalize"> {{item.password}}</td>
+                                <td class="text-capitalize"> {{item.tel}}</td>
+                                <td class="text-capitalize"><button class="btn btn-outline-warning"
+                                        (click)="edit_form(item.id)">Edit
+                                    </button></td>
+                                <td class="text-capitalize"><button class="btn btn-outline-danger"
+                                        (click)="remove(item.id)">Remove
+                                    </button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <form #formData="ngForm" (ngSubmit)="formdata(formData)  ">
+                    <div class="mb-3">
+                        <label for="name" class="form-label  text-light">Full Name:-</label><br>
+                        <input type="text" class="form-control" name name="name" #name="ngModel" ngModel id=""
+                            placeholder="Enter Full Name" required>
+                        <span class="error_msg" *ngIf=" isSubmit && name.invalid && name.touched "> please enter the
+                            name</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label  text-light">Enter The Email:-</label><br>
+                        <input type="email" class="form-control" email name="email" #email="ngModel" ngModel id=""
+                            placeholder="Enter The Email" required>
+                        <span class="error_msg" *ngIf="isSubmit && email.invalid && email.touched"> please enter the
+                            name</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label  text-light">Enter The Email:-</label><br>
+                        <input type="tel" class="form-control" phone name="tel" minlength="10" maxlength="10"
+                            #phone="ngModel" ngModel id="tel" pattern='[- +()0-9]+' placeholder="Enter The Phone"
+                            required>
+                        <span class="error_msg" *ngIf="isSubmit && phone.invalid && phone.touched"> please enter the
+                            name</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-light">Password</label><br>
+                        <input type="password" maxlength="8" class="form-control" password name="password"
+                            #password="ngModel" ngModel id="" placeholder="Enter The Password" required>
+
+                        <span class="error_msg" *ngIf="isSubmit && password.invalid && password.touched"> please enter
+                            the
+                            name</span>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success"> submit </button>
+                    <button class="btn btn-outline-warning" (click)="localstorageGet()">getdata</button>
+                    <button class="btn btn-outline-warning" (click)="localStorageSet()">getdata</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+.portfolio_head {
+    background-color: var(--profile-bg);
+}
+
+@media (max-width: 991.98px) {
+
+    .btn_sl{
+        width: 100%;
+    float: right;
+    }
+
+}

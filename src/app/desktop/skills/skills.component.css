@@ -1,0 +1,30 @@
+.skill_section {
+    background-color: var(--exprience-bg);
+    padding-bottom: 3rem;
+}
+.skills_text{
+    color: var(--hover-bg);
+    padding-bottom: 8px;
+    border-bottom: 2px solid  ;
+    margin: auto;
+}
+
+.card {
+    background-color: var(--profile-bg);
+    color: var(--head-color);
+    pointer-events: painted;
+}
+
+.card img {
+    padding: 2px;
+    object-fit: contain;
+    aspect-ratio: 1.5/1;
+}
+
+.card:hover {
+    filter: blur(1.5px);
+}
+
+.card_hover {
+    width: 100%;
+}
